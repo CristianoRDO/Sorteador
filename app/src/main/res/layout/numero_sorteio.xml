@@ -8,30 +8,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="@color/button_color"
+        android:layout_marginBottom="2dp">
 
         <TextView
             android:id="@+id/posicao_numero"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="20sp"
-            android:layout_weight="2"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/title_color"/>
 
         <TextView
             android:id="@+id/numero"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="20sp"
-            android:layout_weight="2"
-            android:textAlignment="textStart"
             android:layout_marginStart="5dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/title_color"/>
 
     </LinearLayout>
 
