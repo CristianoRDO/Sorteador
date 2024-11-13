@@ -19,7 +19,7 @@ class Draw(private val border: Int = 0) {
         var number: Int;
 
         if(history.size == getHighBorder()) {
-            return -1;
+            throw IllegalStateException("Todos os Números já Foram Sorteados");
         }
 
         do{

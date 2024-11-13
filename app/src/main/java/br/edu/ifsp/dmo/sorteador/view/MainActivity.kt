@@ -3,13 +3,12 @@ package br.edu.ifsp.dmo.sorteador.view
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.dmo.sorteador.R
 import br.edu.ifsp.dmo.sorteador.databinding.ActivityMainBinding
 import br.edu.ifsp.dmo.sorteador.model.Draw
-import br.edu.ifsp.dmo.sorteador.model.SorteioAdapter
+import br.edu.ifsp.dmo.sorteador.adapter.SorteioAdapter
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity(), OnClickListener {
@@ -44,20 +43,18 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
             binding.buttonDraw -> {
 
-                val number = draw.getNumber();
-
-                if(number != -1)
-                {
+                try{
+                    val number = draw.getNumber();
                     binding.textviewExit.text = number.toString();
+                    updateListView();
                 }
-                else {
+                catch (ex: Exception)
+                {
                     Toast.makeText(
                         this,
-                        "Aviso: Todos os Números já Foram Sorteados.",
+                        "Aviso: ${ex.message}.",
                         Toast.LENGTH_SHORT).show()
                 }
-
-                updateListView();
             }
         }
     }

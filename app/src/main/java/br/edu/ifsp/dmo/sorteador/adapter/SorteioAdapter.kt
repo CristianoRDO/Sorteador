@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.sorteador.model
+package br.edu.ifsp.dmo.sorteador.adapter
 
 import br.edu.ifsp.dmo.sorteador.R
 import android.content.Context
